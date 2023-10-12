@@ -95,7 +95,9 @@ export default function ScanMenuScreen() {
     return (
         <View style={styles.container}>
           <Camera style={styles.camera} type={type} ref={cameraRef}>
-            {image && <Image source={{ uri: image }} style={styles.capturedImage} />}
+            { image ? 
+          ( <Image source={{ uri: image }} style={styles.capturedImage}/> ) : 
+          (   <Image/> ) }
           </Camera>
           <View>
             {image ? (

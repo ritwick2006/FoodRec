@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Foodrec",
-    "slug": "Foodrec",
-    "version": "1.0.0",
+    "name": "Bharat Bhoj",
+    "slug": "bharat_bhoj",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "permissions": ["CAMERA"],
+    "jsEngine": "hermes",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -19,10 +19,17 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode" : 100002,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_MEDIA_IMAGES"
+      ],
+      "package": "com.khankhoj.foodrec"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -30,6 +37,20 @@
     "plugins": [
       "expo-router",
       "expo-camera"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7703df3d-c6bb-4d31-95a8-5dd10cecc9a2"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7703df3d-c6bb-4d31-95a8-5dd10cecc9a2"
+    }
   }
 }
